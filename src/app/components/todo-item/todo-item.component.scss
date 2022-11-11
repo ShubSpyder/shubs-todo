@@ -1,0 +1,71 @@
+.card {
+    background-color: var(--cardBg);
+    width: 100%;
+    margin: 0.5rem 0;
+    padding: 1rem;
+    border-radius: 0.25rem;
+
+    &:hover {
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+    }
+
+    .todo-details {
+        max-width: 70%;
+    }
+
+    .strike-out {
+        text-decoration: line-through;
+    }
+
+    .title {
+        margin-left: 0.5rem;
+    }
+
+    .input {
+        max-width: 80%;
+        margin-left: 0.4rem;
+        border-radius: 0.25rem;
+        background-color: var(--inputBg);
+        padding: 0.4rem;
+        outline: 1px solid transparent;
+        outline-offset: 1px;
+    }
+
+
+    i {
+        cursor: pointer;
+        font-size: 1.25rem;
+    }
+
+    .i-blue {
+        color: var(--blueBg);
+
+        &:hover{
+            color: var(--blueHoverColor);
+        }
+
+    }
+
+    .i-green {
+        color: var(--greenBg);
+
+        &:hover{
+            color: var(--greenHoverColor);
+        }
+
+    }
+
+    .i-red {
+        color: var(--redBg);
+
+        &:hover{
+            color: var(--redHoverColor);
+        }
+    }
+
+    .i-mr{
+        margin-right: 0.75rem;
+    }
+
+
+}

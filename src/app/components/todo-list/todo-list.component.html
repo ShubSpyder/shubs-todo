@@ -1,0 +1,8 @@
+<ul>
+    <div *ngIf="todos.length === 0" class="watermark-container">
+        <h1 (dblclick)="changeTheme()"> Riya's Todo</h1>
+    </div>
+    <li *ngFor="let todo of todos; let i =index;">
+        <app-todo-item [todo]="todo"></app-todo-item>
+    </li>
+</ul>

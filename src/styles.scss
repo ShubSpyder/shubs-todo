@@ -1,0 +1,116 @@
+$bg_light: #fff;
+$input_light: #f3f4f6;
+$card_light: #f9fafb;
+$textColor_light: #333;
+$blue_bg_secondary: rgb(59 130 246);
+$green_bg_secondary: rgb(34 197 94);
+$red_bg_seondary: rgb(239 68 68);
+
+$bg_dark: #030303;
+$input_dark: #272729;
+$card_dark: #1a1a1b;
+$textColor_dark: #fff;
+$blue_bg_secondary_dark: rgb(147 197 253);
+$green_bg_secondary_dark: rgb(134 239 172);
+$red_bg_seondary_dark: rgb(252 165 165);
+
+$blue_bg: #60a5fa;
+$green_bg: rgb(74 222 128);
+$red_bg: rgb(248 113 113);
+
+
+@mixin lighten() {
+    --bgColor: #{$bg_light};
+    --cardBg: #{$card_light};
+    --inputBg: #{$input_light};
+    --textColor: #{$textColor_light};
+    --blueBg: #{$blue_bg};
+    --greenBg: #{$green_bg};
+    --redBg: #{$red_bg};
+    --blueHoverColor: #{$blue_bg_secondary_dark};
+    --greenHoverColor: #{$green_bg_secondary_dark};
+    --redHoverColor: #{$red_bg_seondary_dark};
+}
+
+@mixin darken() {
+    --bgColor: #{$bg_dark};
+    --cardBg: #{$card_dark};
+    --inputBg: #{$input_dark};
+    --textColor: #{$textColor_dark};
+    --blueBg: #{$blue_bg};
+    --greenBg: #{$green_bg};
+    --redBg: #{$red_bg};
+    --blueHoverColor: #{$blue_bg_secondary};
+    --greenHoverColor: #{$green_bg_secondary};
+    --redHoverColor: #{$red_bg_seondary};
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+body.dark {
+    @include darken();
+}
+
+body.light {
+    @include lighten();
+}
+
+body {
+    background-color: var(--bgColor);
+    color: var(--textColor);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.d-flex{
+    display: flex
+}
+
+.just-center{
+    justify-content: center;
+}
+
+.just-space{
+    justify-content: space-between;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.align-content-c{
+    align-content: center;
+}

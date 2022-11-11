@@ -1,0 +1,16 @@
+<div class="card d-flex just-space align-center">
+    <div class="d-flex align-center todo-details" [ngClass]="{'strike-out': todo?.completed}">
+        <div>#&nbsp;{{todo?.id}}</div>
+        <div class="title" *ngIf="!editTodo">{{todo?.title}}</div>
+        <input type="text" *ngIf="editTodo" placeholder="Update Title" [(ngModel)]="todoInput" class="input">
+    </div>
+
+    <div class="d-flex justify-center align-center">
+        <i class="fa-regular i-blue i-mr" title="Complete Todo" (click)="changeStatus()" [ngClass]="{'fa-square' : !todo?.completed, 'fa-square-check': todo?.completed}" ></i>
+        <i *ngIf="editTodo" (click)="updateTodo()" class="fa-solid fa-upload i-green i-mr"
+            title="Update Todo"></i>
+        <i *ngIf="!editTodo" (click)="toggleEdit()"
+            class="fa-regular fa-pen-to-square i-green i-mr" title="Edit Todo"></i>
+        <i class="fa-solid fa-trash i-red" title="Delete Todo" (click)="deleteTodo()"></i>
+    </div>
+</div>
